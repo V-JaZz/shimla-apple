@@ -1,22 +1,49 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+# Shimla Apple - Farm Fresh Apples
+
+A modern e-commerce website for selling premium Shimla apples directly from the farm to customers.
+
+## Tech Stack
+
+- Next.js 14
+- TypeScript
+- Tailwind CSS
+- React
+
+## Project Structure
+
+```
+src/
+├── app/                    # Next.js app directory
+├── components/            # Reusable components
+│   ├── common/           # Shared components
+│   ├── layout/           # Layout components
+│   └── sections/         # Page sections
+├── lib/                   # Utility functions and shared logic
+├── types/                 # TypeScript type definitions
+├── styles/               # Global styles and CSS modules
+└── constants/            # Constants and configuration
+```
 
 ## Getting Started
 
-First, run the development server:
+1. Clone the repository
+2. Install dependencies:
+   ```bash
+   npm install
+   ```
+3. Run the development server:
+   ```bash
+   npm run dev
+   ```
+4. Open [http://localhost:3000](http://localhost:3000) in your browser
 
-```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
-```
+## Development
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
-
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+- `npm run dev` - Start development server
+- `npm run build` - Build for production
+- `npm run start` - Start production server
+- `npm run lint` - Run ESLint
+- `npm run type-check` - Run TypeScript type checking
 
 This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
 
