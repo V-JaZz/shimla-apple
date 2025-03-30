@@ -168,7 +168,7 @@ export default function AboutPage() {
               <div className="text-4xl mb-4">🤝</div>
               <h3 className="text-xl font-semibold mb-2">Customer Trust</h3>
               <p className="text-gray-600">
-                We value our customers' trust and work hard to maintain the highest standards
+                We value our customer&apos;s trust and work hard to maintain the highest standards
                 of service and quality.
               </p>
             </div>
