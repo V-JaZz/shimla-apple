@@ -8,7 +8,7 @@ export default function Hero() {
       {/* Background Image */}
       <div className="absolute inset-0 z-0">
         <Image
-          src="https://images.unsplash.com/photo-1619546813926-a78fa6372cd2?q=80&w=2070"
+          src="/images/apple.avif"
           alt="Fresh Shimla Apples"
           fill
           className="object-cover brightness-50"

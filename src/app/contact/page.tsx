@@ -5,21 +5,18 @@ export default function ContactPage() {
   return (
     <div className="min-h-screen">
       {/* Hero Section */}
-      <div className="relative h-[40vh] flex items-center">
-        <div className="absolute inset-0 z-0">
-          <Image
-            src="https://images.unsplash.com/photo-1619546813926-a78fa6372cd2?q=80&w=2070"
-            alt="Contact Us"
-            fill
-            className="object-cover brightness-50"
-            priority
-          />
-        </div>
-        <div className="container mx-auto px-4 relative z-10">
-          <h1 className="text-4xl font-bold text-white mb-4">Contact Us</h1>
-          <p className="text-xl text-white max-w-2xl">
-            Get in touch with us for any questions about our products or services
-          </p>
+      <div className="relative h-[60vh]">
+        <Image
+          src="/images/apple.avif"
+          alt="Contact Us"
+          fill
+          className="object-cover brightness-50"
+          priority
+        />
+        <div className="absolute inset-0 flex items-center justify-center">
+          <h1 className="text-4xl md:text-5xl font-bold text-white text-center">
+            Contact Us
+          </h1>
         </div>
       </div>
 
@@ -65,7 +62,7 @@ export default function ContactPage() {
                   type="text"
                   id="name"
                   name="name"
-                  className="w-full px-4 py-2 border border-gray-300 rounded-md focus:ring-2 focus:ring-red-500 focus:border-transparent"
+                  className="w-full px-4 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-red-500 focus:border-transparent"
                   required
                 />
               </div>
@@ -77,7 +74,7 @@ export default function ContactPage() {
                   type="email"
                   id="email"
                   name="email"
-                  className="w-full px-4 py-2 border border-gray-300 rounded-md focus:ring-2 focus:ring-red-500 focus:border-transparent"
+                  className="w-full px-4 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-red-500 focus:border-transparent"
                   required
                 />
               </div>
@@ -101,13 +98,13 @@ export default function ContactPage() {
                   id="message"
                   name="message"
                   rows={4}
-                  className="w-full px-4 py-2 border border-gray-300 rounded-md focus:ring-2 focus:ring-red-500 focus:border-transparent"
+                  className="w-full px-4 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-red-500 focus:border-transparent"
                   required
                 ></textarea>
               </div>
               <button
                 type="submit"
-                className="w-full bg-red-600 text-white py-3 px-6 rounded-md hover:bg-red-700 transition-colors"
+                className="w-full bg-red-600 text-white py-3 px-6 rounded-lg hover:bg-red-700 transition-colors"
               >
                 Send Message
               </button>

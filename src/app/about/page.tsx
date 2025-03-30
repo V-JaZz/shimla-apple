@@ -1,5 +1,100 @@
 import Image from 'next/image';
 
+//TODO: update about
+// export default function AboutPage() {
+//   return (
+//     <div className="min-h-screen">
+//       {/* Hero Section */}
+//       <div className="relative h-[60vh]">
+//         <Image
+//           src="/images/apple.avif"
+//           alt="Our Apple Farm"
+//           fill
+//           className="object-cover brightness-50"
+//           priority
+//         />
+//         <div className="absolute inset-0 flex items-center justify-center">
+//           <h1 className="text-4xl md:text-5xl font-bold text-white text-center">
+//             Our Story
+//           </h1>
+//         </div>
+//       </div>
+
+//       {/* Content Sections */}
+//       <div className="container mx-auto px-4 py-16">
+//         {/* Our Heritage */}
+//         <div className="grid md:grid-cols-2 gap-12 items-center mb-16">
+//           <div className="relative h-[400px]">
+//             <Image
+//               src="/images/apple.avif"
+//               alt="Our Heritage"
+//               fill
+//               className="object-cover rounded-lg"
+//             />
+//           </div>
+//           <div>
+//             <h2 className="text-3xl font-bold mb-6">Our Heritage</h2>
+//             <p className="text-gray-600 mb-4">
+//               For over three generations, our family has been cultivating the finest apples in the heart of Shimla. 
+//               Our journey began in 1950 when our grandfather first planted apple trees in the fertile soil of Himachal Pradesh.
+//             </p>
+//             <p className="text-gray-600">
+//               Today, we continue his legacy with the same passion and dedication, ensuring that every apple we grow 
+//               meets the highest standards of quality and taste.
+//             </p>
+//           </div>
+//         </div>
+
+//         {/* Our Values */}
+//         <div className="grid md:grid-cols-2 gap-12 items-center mb-16">
+//           <div className="order-2 md:order-1">
+//             <h2 className="text-3xl font-bold mb-6">Our Values</h2>
+//             <p className="text-gray-600 mb-4">
+//               We believe in sustainable farming practices that respect both the environment and our customers. 
+//               Our commitment to quality means we never compromise on the care and attention we give to our apple trees.
+//             </p>
+//             <p className="text-gray-600">
+//               From hand-picking each apple to ensuring proper storage and transportation, we maintain the highest 
+//               standards throughout our entire process.
+//             </p>
+//           </div>
+//           <div className="relative h-[400px] order-1 md:order-2">
+//             <Image
+//               src="/images/apple.avif"
+//               alt="Our Values"
+//               fill
+//               className="object-cover rounded-lg"
+//             />
+//           </div>
+//         </div>
+
+//         {/* Our Process */}
+//         <div className="grid md:grid-cols-2 gap-12 items-center">
+//           <div className="relative h-[400px]">
+//             <Image
+//               src="/images/apple.avif"
+//               alt="Our Process"
+//               fill
+//               className="object-cover rounded-lg"
+//             />
+//           </div>
+//           <div>
+//             <h2 className="text-3xl font-bold mb-6">Our Process</h2>
+//             <p className="text-gray-600 mb-4">
+//               Every apple we sell goes through a rigorous selection process. We carefully inspect each fruit for 
+//               size, color, and quality before it reaches our customers.
+//             </p>
+//             <p className="text-gray-600">
+//               Our modern storage facilities ensure that the apples maintain their freshness and quality throughout 
+//               the supply chain, from our orchards to your doorstep.
+//             </p>
+//           </div>
+//         </div>
+//       </div>
+//     </div>
+//   );
+// }
+
 export default function AboutPage() {
   return (
     <div className="min-h-screen">
@@ -7,7 +102,7 @@ export default function AboutPage() {
       <div className="relative h-[60vh] flex items-center">
         <div className="absolute inset-0 z-0">
           <Image
-            src="https://images.unsplash.com/photo-1619546813926-a78fa6372cd2?q=80&w=2070"
+            src="/images/apple.avif"
             alt="Our Apple Orchard"
             fill
             className="object-cover brightness-50"
@@ -41,7 +136,7 @@ export default function AboutPage() {
           </div>
           <div className="relative h-[400px]">
             <Image
-              src="https://images.unsplash.com/photo-1619546813926-a78fa6372cd2?q=80&w=2070"
+              src="/images/apple.avif"
               alt="Family Orchard"
               fill
               className="object-cover rounded-lg"
@@ -87,7 +182,7 @@ export default function AboutPage() {
             <div className="text-center">
               <div className="relative h-64 w-64 mx-auto mb-4">
                 <Image
-                  src="https://images.unsplash.com/photo-1619546813926-a78fa6372cd2?q=80&w=2070"
+                  src="/images/apple.avif"
                   alt="Team Member"
                   fill
                   className="object-cover rounded-full"
@@ -99,7 +194,7 @@ export default function AboutPage() {
             <div className="text-center">
               <div className="relative h-64 w-64 mx-auto mb-4">
                 <Image
-                  src="https://images.unsplash.com/photo-1619546813926-a78fa6372cd2?q=80&w=2070"
+                  src="/images/apple.avif"
                   alt="Team Member"
                   fill
                   className="object-cover rounded-full"
@@ -111,7 +206,7 @@ export default function AboutPage() {
             <div className="text-center">
               <div className="relative h-64 w-64 mx-auto mb-4">
                 <Image
-                  src="https://images.unsplash.com/photo-1619546813926-a78fa6372cd2?q=80&w=2070"
+                  src="/images/apple.avif"
                   alt="Team Member"
                   fill
                   className="object-cover rounded-full"
