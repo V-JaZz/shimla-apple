@@ -57,17 +57,17 @@ export default function ProductPage({ params }: { params: Promise<{ id: string }
           
           <div className="flex items-center gap-4 mb-6">
             <label className="text-gray-700">Quantity:</label>
-            <div className="flex items-center border rounded">
+            <div className="flex items-center border rounded-lg overflow-hidden">
               <button
                 onClick={() => setQuantity(Math.max(1, quantity - 1))}
-                className="px-4 py-2 border-r hover:bg-gray-100"
+                className="px-3 py-2 border-r hover:bg-gray-100 transition-colors"
               >
                 -
               </button>
-              <span className="px-4 py-2">{quantity}</span>
+              <span className="px-3 py-2 w-12 text-center inline-block flex items-center justify-center">{quantity}</span>
               <button
                 onClick={() => setQuantity(Math.min(product.stock, quantity + 1))}
-                className="px-4 py-2 border-l hover:bg-gray-100"
+                className="px-3 py-2 border-l hover:bg-gray-100 transition-colors"
               >
                 +
               </button>

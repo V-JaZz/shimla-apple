@@ -46,17 +46,17 @@ export default function CartPage() {
                 <h3 className="text-lg font-semibold">{item.name}</h3>
                 <p className="text-gray-600">₹{item.price}</p>
                 <div className="flex items-center gap-4 mt-2">
-                  <div className="flex items-center border rounded">
+                  <div className="flex items-center border rounded-lg overflow-hidden">
                     <button
                       onClick={() => updateQuantity(item.id, Math.max(1, item.quantity - 1))}
-                      className="px-3 py-1 border-r hover:bg-gray-100"
+                      className="px-3 py-1 border-r hover:bg-gray-100 transition-colors"
                     >
                       -
                     </button>
-                    <span className="px-3 py-1">{item.quantity}</span>
+                    <span className="px-3 py-1 w-12 text-center inline-block flex items-center justify-center">{item.quantity}</span>
                     <button
                       onClick={() => updateQuantity(item.id, Math.min(item.stock, item.quantity + 1))}
-                      className="px-3 py-1 border-l hover:bg-gray-100"
+                      className="px-3 py-1 border-l hover:bg-gray-100 transition-colors"
                     >
                       +
                     </button>
