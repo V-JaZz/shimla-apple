@@ -1,0 +1,13 @@
+<svg viewBox="0 0 200 200" xmlns="http://www.w3.org/2000/svg">
+  <!-- Leaf -->
+  <path d="M100 40 C120 20, 140 30, 130 50 C120 70, 100 60, 100 40" fill="#4CAF50" />
+  
+  <!-- Apple Body -->
+  <path d="M100 60 C60 60, 30 90, 40 130 C50 170, 90 180, 100 170 C110 180, 150 170, 160 130 C170 90, 140 60, 100 60" fill="#E53935" />
+  
+  <!-- Stem -->
+  <path d="M95 45 L105 45 L105 60 L95 60 Z" fill="#8D6E63" />
+  
+  <!-- Highlight -->
+  <ellipse cx="70" cy="100" rx="15" ry="25" fill="#EF5350" opacity="0.7" />
+</svg>

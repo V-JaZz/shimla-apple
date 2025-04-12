@@ -11,6 +11,11 @@ const inter = Inter({ subsets: ["latin"] });
 export const metadata: Metadata = {
   title: "Shimla Apple - Fresh Apples from the Heart of Shimla",
   description: "Experience the authentic taste of premium Shimla apples, handpicked from our family-owned orchards and delivered fresh to your doorstep.",
+  icons: {
+    icon: '/apple-icon.svg',
+    shortcut: '/apple-icon.svg',
+    apple: '/apple-icon.svg',
+  },
 };
 
 export default function RootLayout({
