@@ -3,6 +3,60 @@ import { Product } from '@/types';
 export const products: Product[] = [
   {
     id: '1',
+    name: 'Royal Gala Apples',
+    description: 'Sweet and crisp with a distinctive red-orange color and slight striping. Perfect for snacking and salads.',
+    price: 120,
+    image: '/images/apple.avif',
+    category: 'Premium',
+    origin: 'Himachal Pradesh',
+    grade: 'A',
+    storage: 'Cool, dry place',
+    shelfLife: '2-3 weeks',
+    sizes: {
+      S: { price: 100, weight: '80-100g' },
+      M: { price: 120, weight: '100-120g' },
+      L: { price: 140, weight: '120-150g' },
+      XL: { price: 160, weight: '150-180g' }
+    } 
+  },
+  {
+    id: '2',
+    name: 'Red Delicious Apples',
+    description: 'Classic red apples with a mildly sweet flavor and firm texture. Great for fresh eating and baking.',
+    price: 110,
+    image: '/images/apple.avif',
+    category: 'Premium',
+    origin: 'Kashmir',
+    grade: 'A',
+    storage: 'Cool, dry place',
+    shelfLife: '2-3 weeks',
+    sizes: {
+      S: { price: 90, weight: '80-100g' },
+      M: { price: 110, weight: '100-120g' },
+      L: { price: 130, weight: '120-150g' },
+      XL: { price: 150, weight: '150-180g' }
+    }
+  },
+  {
+    id: '3',
+    name: 'Granny Smith Apples',
+    description: 'Tart and crisp green apples perfect for baking and adding a tangy flavor to salads.',
+    price: 130,
+    image: '/images/apple.avif',
+    category: 'Premium',
+    origin: 'Himachal Pradesh',
+    grade: 'A',
+    storage: 'Cool, dry place',
+    shelfLife: '2-3 weeks',
+    sizes: {
+      S: { price: 110, weight: '80-100g' },
+      M: { price: 130, weight: '100-120g' },
+      L: { price: 150, weight: '120-150g' },
+      XL: { price: 170, weight: '150-180g' }
+    }
+  },
+  {
+    id: '4',
     name: 'Premium Shimla Apple',
     description: 'Handpicked from our premium orchards in Shimla, these apples are naturally sweet and juicy.',
     price: 299,
@@ -13,10 +67,16 @@ export const products: Product[] = [
     origin: 'Shimla, Himachal Pradesh',
     grade: 'Premium A',
     storage: 'Store in a cool, dry place',
-    shelfLife: '2-3 weeks'
+    shelfLife: '2-3 weeks',
+    sizes: {
+      S: { price: 100, weight: '80-100g' },
+      M: { price: 120, weight: '100-120g' },
+      L: { price: 140, weight: '120-150g' },
+      XL: { price: 160, weight: '150-180g' }
+    }
   },
   {
-    id: '2',
+    id: '5',
     name: 'Organic Shimla Apple',
     description: 'Organically grown apples without any pesticides or chemicals.',
     price: 399,
@@ -27,10 +87,16 @@ export const products: Product[] = [
     origin: 'Shimla, Himachal Pradesh',
     grade: 'Organic A',
     storage: 'Store in a cool, dry place',
-    shelfLife: '2-3 weeks'
+    shelfLife: '2-3 weeks',
+    sizes: {
+      S: { price: 90, weight: '80-100g' },
+      M: { price: 110, weight: '100-120g' },
+      L: { price: 130, weight: '120-150g' },
+      XL: { price: 150, weight: '150-180g' }
+    }
   },
   {
-    id: '3',
+    id: '6',
     name: 'Royal Shimla Apple',
     description: 'Our finest selection of apples, perfect for gifting.',
     price: 499,
@@ -41,24 +107,16 @@ export const products: Product[] = [
     origin: 'Shimla, Himachal Pradesh',
     grade: 'Royal A',
     storage: 'Store in a cool, dry place',
-    shelfLife: '2-3 weeks'
+    shelfLife: '2-3 weeks',
+    sizes: {
+      S: { price: 110, weight: '80-100g' },
+      M: { price: 130, weight: '100-120g' },
+      L: { price: 150, weight: '120-150g' },
+      XL: { price: 170, weight: '150-180g' }
+    }
   },
   {
-    id: '4',
-    name: 'Red Delicious Shimla',
-    description: 'Classic red apples with perfect sweetness and crunch.',
-    price: 279,
-    image: '/images/apple.avif',
-    category: 'Premium',
-    categoryColor: 'bg-blue-500',
-    stock: 80,
-    origin: 'Shimla, Himachal Pradesh',
-    grade: 'Premium B',
-    storage: 'Store in a cool, dry place',
-    shelfLife: '2-3 weeks'
-  },
-  {
-    id: '5',
+    id: '7',
     name: 'Golden Shimla',
     description: 'Sweet and juicy golden apples from high-altitude orchards.',
     price: 329,
@@ -69,10 +127,16 @@ export const products: Product[] = [
     origin: 'Shimla, Himachal Pradesh',
     grade: 'Premium A',
     storage: 'Store in a cool, dry place',
-    shelfLife: '2-3 weeks'
+    shelfLife: '2-3 weeks',
+    sizes: {
+      S: { price: 100, weight: '80-100g' },
+      M: { price: 120, weight: '100-120g' },
+      L: { price: 140, weight: '120-150g' },
+      XL: { price: 160, weight: '150-180g' }
+    }
   },
   {
-    id: '6',
+    id: '8',
     name: 'Green Shimla',
     description: 'Crisp and tangy green apples with a refreshing taste.',
     price: 249,
@@ -83,15 +147,17 @@ export const products: Product[] = [
     origin: 'Shimla, Himachal Pradesh',
     grade: 'Standard A',
     storage: 'Store in a cool, dry place',
-    shelfLife: '2-3 weeks'
+    shelfLife: '2-3 weeks',
+    sizes: {
+      S: { price: 90, weight: '80-100g' },
+      M: { price: 110, weight: '100-120g' },
+      L: { price: 130, weight: '120-150g' },
+      XL: { price: 150, weight: '150-180g' }
+    }
   }
 ];
 
-export function getProducts(): Product[] {
-  return products;
-}
-
-export function getProduct(id: string): Product | undefined {
+export function getProductById(id: string): Product | undefined {
   return products.find(product => product.id === id);
 }
 

@@ -53,7 +53,7 @@ export const blogPosts: BlogPost[] = [
       Remember to eat the whole apple, including the skin, as it contains many of the beneficial nutrients.
     `,
     image: '/images/apple.avif',
-    author: 'Dr. Sarah Johnson',
+    author: 'Dr. Sarah',
     date: '2024-03-15',
     category: 'Health',
     readTime: '5 min read'

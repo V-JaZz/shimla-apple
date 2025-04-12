@@ -3,7 +3,7 @@ import { getBlogPost } from '@/data/blog';
 import { notFound } from 'next/navigation';
 
 export default async function BlogPostPage({ params }: { params: { slug: string } }) {
-  const { slug } = await Promise.resolve(params);
+  const { slug } = params;
   const post = await getBlogPost(slug);
 
   if (!post) {
