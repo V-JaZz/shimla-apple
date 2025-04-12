@@ -141,7 +141,7 @@ export default function ProductDetail({ params }: { params: Promise<{ id: string
 
             {/* Add to Cart Button */}
             <div className="pt-6">
-              {showSuccess ? (
+              {showSuccess || isInCart ? (
                 <motion.div
                   initial={{ opacity: 0, y: 10 }}
                   animate={{ opacity: 1, y: 0 }}
