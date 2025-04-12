@@ -48,8 +48,6 @@ export default function ProductsPage() {
           <ProductCard
             key={`${product.id}-${index}`}
             product={product}
-            index={index}
-            showCategoryBadge={true}
           />
         ))}
       </div>

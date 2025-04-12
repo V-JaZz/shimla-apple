@@ -12,7 +12,7 @@ const AVAILABLE_SIZES = ['S', 'M', 'L', 'XL'] as const;
 export default function ProductDetail({ params }: { params: Promise<{ id: string }> }) {
   const resolvedParams = use(params);
   const product = getProductById(resolvedParams.id);
-  const { addToCart, items } = useCart();
+  const { addToCart } = useCart();
   const [selectedSize, setSelectedSize] = useState<typeof AVAILABLE_SIZES[number] | null>(null);
   const [quantity, setQuantity] = useState(1);
   const [showSuccess, setShowSuccess] = useState(false);
@@ -20,8 +20,6 @@ export default function ProductDetail({ params }: { params: Promise<{ id: string
   if (!product) {
     notFound();
   }
-
-  const isInCart = items.some(item => item.id === product.id && item.size === selectedSize);
 
   const handleAddToCart = () => {
     if (!selectedSize || !product) {
@@ -141,7 +139,7 @@ export default function ProductDetail({ params }: { params: Promise<{ id: string
 
             {/* Add to Cart Button */}
             <div className="pt-6">
-              {showSuccess || isInCart ? (
+              {showSuccess ? (
                 <motion.div
                   initial={{ opacity: 0, y: 10 }}
                   animate={{ opacity: 1, y: 0 }}

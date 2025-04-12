@@ -1,10 +1,22 @@
 import Image from 'next/image';
 import { getBlogPost } from '@/data/blog';
 import { notFound } from 'next/navigation';
+import { use } from 'react';
 
-export default async function BlogPostPage({ params }: { params: { slug: string } }) {
-  const { slug } = params;
-  const post = await getBlogPost(slug);
+interface BlogPost {
+  image: string;
+  title: string;
+  category: string;
+  author: string;
+  date: string;
+  readTime: string;
+  content: string;
+}
+
+export default function BlogPostPage({ params }: { params: Promise<{ slug: string }> }) {
+  const resolvedParams = use(params);
+  const postPromise = getBlogPost(resolvedParams.slug);
+  const post = use(postPromise) as BlogPost | undefined;
 
   if (!post) {
     notFound();
@@ -42,7 +54,7 @@ export default async function BlogPostPage({ params }: { params: { slug: string 
       <div className="container mx-auto px-4 py-16">
         <div className="max-w-3xl mx-auto">
           <div className="prose prose-lg mx-auto">
-            {post.content.split('\n').map((paragraph, index) => (
+            {post.content.split('\n').map((paragraph: string, index: number) => (
               <p key={index} className="mb-4">
                 {paragraph.trim()}
               </p>
