@@ -1,10 +1,17 @@
 :root {
   --font-primary: var(--font-manrope);
+  --color-dimmed: #364153;
+  --red-primary: #e7000b;
 }
 
 * {
   margin: 0;
   padding: 0;
+}
+
+body {
+  background-color: var(--mantine-color-body) !important;
+  color: #000 !important;
 }
 
 h1,
@@ -17,26 +24,35 @@ h6 {
 }
 
 h1 {
-  font-size: 2.5rem !important;
+  font-size: 3rem !important;
   font-weight: 900 !important;
 
   @media (max-width: $mantine-breakpoint-sm) {
-    font-size: 2.25rem !important;
+    font-size: 2rem !important;
   }
 }
 
-h1.sm-title {
+h1.title-sm {
   font-size: 1.5rem !important;
   font-weight: 900 !important;
 
   @media (max-width: $mantine-breakpoint-sm) {
-    font-size: 1rem !important;
+    font-size: 1.25rem !important;
   }
 }
 
 h2 {
   font-size: 2rem !important;
   font-weight: 700 !important;
+}
+
+h2.title-sm {
+  font-size: 1.4rem !important;
+  font-weight: 700 !important;
+
+  @media (max-width: $mantine-breakpoint-sm) {
+    font-size: 1.2rem !important;
+  }
 }
 
 h3 {
@@ -62,4 +78,12 @@ h6 {
 a {
   text-decoration: none;
   color: inherit;
+}
+
+.red-primary {
+  color: var(--red-primary);
+}
+
+.dimmed {
+  color: var(--color-dimmed);
 }
