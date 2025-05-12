@@ -1,11 +1,10 @@
-import FeaturedProducts from '@/components/home/FeaturedProducts';
-import Hero from '@/components/home/Hero';
+import { Fragment } from "react";
+import { Container } from "@mantine/core";
 
-export default function Home() {
+export default function page() {
   return (
-    <main>
-      <Hero />
-      <FeaturedProducts />
-    </main>
+    <Fragment>
+      <Container size="lg">Home</Container>
+    </Fragment>
   );
 }
