@@ -16,12 +16,13 @@ export const siteConfig = {
   navigation: [
     { label: "Home", href: "/" },
     { label: "Products", href: "/products" },
+    { label: "Blog", href: "/blog" },
     { label: "About", href: "/about" },
     { label: "Contact", href: "/contact" },
   ],
   footerLinks: [
     {
-      title: "Company",
+      title: "Quick Links",
       links: [
         { label: "About Us", href: "/about" },
         { label: "Our Story", href: "/about#story" },
