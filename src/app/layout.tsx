@@ -5,6 +5,7 @@ import { CartProvider } from "@/context/CartContext";
 import { MantineProvider } from "@mantine/core";
 import { interFont } from "@/config/fonts";
 import theme from "@/config/theme";
+import { Header, Footer } from "@/components";
 
 export const metadata: Metadata = {
   title: "Shimla Apple - Fresh Apples from the Heart of Shimla",
@@ -31,7 +32,9 @@ export default function RootLayout({
           forceColorScheme="light"
         >
           <CartProvider>
+            <Header />
             <main>{children}</main>
+            <Footer />
           </CartProvider>
         </MantineProvider>
       </body>
