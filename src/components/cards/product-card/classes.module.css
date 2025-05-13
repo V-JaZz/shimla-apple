@@ -1,0 +1,14 @@
+.card {
+  background-color: var(--mantine-color-body);
+  box-shadow: var(--shadow-primary);
+
+  .cardImg {
+    transition: all 0.3s ease;
+  }
+
+  &:hover {
+    .cardImg {
+      transform: scale(1.05);
+    }
+  }
+}

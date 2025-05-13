@@ -16,10 +16,15 @@ import Link from "next/link";
 import { siteConfig } from "@/constants/site";
 import { Logo } from "@/components";
 import { Fragment } from "react";
+import { usePathname } from "next/navigation";
 
 export function Header() {
     const [drawerOpened, { toggle: toggleDrawer, close: closeDrawer }] =
         useDisclosure(false);
+
+    const pathname = usePathname();
+
+    const isActive = (href: string) => pathname === href;
 
     return (
         <Fragment>
@@ -29,7 +34,7 @@ export function Header() {
                         <Logo />
                         <Group gap={30} className={classes.links} visibleFrom="sm">
                             {siteConfig.navigation.map(({ label, href }) => (
-                                <Link key={label} href={href} className={classes.link}>
+                                <Link key={label} href={href} className={isActive(href) ? classes.activeLink : classes.link}>
                                     {label}
                                 </Link>
                             ))}
@@ -40,7 +45,7 @@ export function Header() {
                             hiddenFrom="sm"
                         />
 
-                        <Button visibleFrom="sm">Sign up</Button>
+                        <Button color="red" visibleFrom="sm">Sign up</Button>
                     </Group>
                 </Container>
             </header>
@@ -59,7 +64,7 @@ export function Header() {
 
                 <Flex direction="column" gap="sm" px="md" className={classes.links}>
                     {siteConfig.navigation.map(({ label, href }) => (
-                        <Link key={label} href={href} className={classes.link}>
+                        <Link key={label} href={href} className={isActive(href) ? classes.activeLink : classes.link}>
                             {label}
                         </Link>
                     ))}
@@ -68,7 +73,7 @@ export function Header() {
                 <Divider my="md" />
 
                 <Box px="md">
-                    <Button fullWidth>Sign up</Button>
+                    <Button color="red" fullWidth>Sign up</Button>
                 </Box>
             </Drawer>
         </Fragment>
