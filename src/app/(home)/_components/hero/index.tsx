@@ -1,5 +1,14 @@
-import classes from "./hero.module.css";
-import { Box, Button, Container, Flex, Group, Overlay, Text, Title } from "@mantine/core";
+import classes from "./classes.module.css";
+import {
+    Box,
+    Button,
+    Container,
+    Flex,
+    Group,
+    Overlay,
+    Text,
+    Title,
+} from "@mantine/core";
 import Link from "next/link";
 
 export default function Hero() {
@@ -20,15 +29,10 @@ export default function Hero() {
                         </Text>
 
                         <Group mx="auto" mt={20}>
-                            <Button size="md" component={Link} href="/products">
+                            <Button color="red" size="md" component={Link} href="/products">
                                 Shopw Now
                             </Button>
-                            <Button
-                                size="md"
-                                variant="white"
-                                component={Link}
-                                href="/about"
-                            >
+                            <Button size="md" variant="white" component={Link} href="/about">
                                 Learn More
                             </Button>
                         </Group>
@@ -36,5 +40,5 @@ export default function Hero() {
                 </Container>
             </Flex>
         </Box>
-    )
+    );
 }
