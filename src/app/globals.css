@@ -2,6 +2,7 @@
   --font-primary: var(--font-manrope);
   --color-dimmed: #364153;
   --red-primary: #e7000b;
+  --shadow-primary: 0 10px 50px rgba(0, 0, 0, 0.1);
 }
 
 * {
@@ -24,11 +25,11 @@ h6 {
 }
 
 h1 {
-  font-size: 3rem !important;
+  font-size: 2.5rem !important;
   font-weight: 900 !important;
 
   @media (max-width: $mantine-breakpoint-sm) {
-    font-size: 2rem !important;
+    font-size: 1.8rem !important;
   }
 }
 
@@ -44,6 +45,10 @@ h1.title-sm {
 h2 {
   font-size: 2rem !important;
   font-weight: 700 !important;
+
+  @media (max-width: $mantine-breakpoint-sm) {
+    font-size: 1.5rem !important;
+  }
 }
 
 h2.title-sm {
@@ -58,6 +63,15 @@ h2.title-sm {
 h3 {
   font-size: 1.75rem !important;
   font-weight: 600 !important;
+}
+
+h3.title-sm {
+  font-size: 1.2rem !important;
+  font-weight: 700 !important;
+
+  @media (max-width: $mantine-breakpoint-sm) {
+    font-size: 1rem !important;
+  }
 }
 
 h4 {
@@ -81,9 +95,13 @@ a {
 }
 
 .red-primary {
-  color: var(--red-primary);
+  color: var(--red-primary) !important;
 }
 
 .dimmed {
-  color: var(--color-dimmed);
+  color: var(--color-dimmed) !important;
+}
+
+.shadow-primary {
+  box-shadow: var(--shadow-primary) !important;
 }
