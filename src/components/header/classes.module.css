@@ -1,0 +1,22 @@
+.header {
+  padding: 0.5rem 0;
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.08);
+  background-color: var(--mantine-color-body);
+}
+
+.links {
+  .link,
+  .activeLink {
+    transition: all 0.2s ease-in-out;
+    color: var(--color-dimmed);
+
+    @mixin hover {
+      text-decoration: underline;
+      color: var(--red-primary);
+    }
+  }
+
+  .activeLink {
+    color: var(--red-primary);
+  }
+}

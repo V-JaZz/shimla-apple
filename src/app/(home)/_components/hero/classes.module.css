@@ -1,0 +1,28 @@
+.hero {
+  .wrapper {
+    min-height: calc(100dvh - 50px);
+    padding: calc(var(--mantine-spacing-xl) * 3) 0;
+    position: relative;
+    background-image: url("/images/apple.avif");
+    background-size: cover;
+    background-position: center;
+
+    @media (max-width: $mantine-breakpoint-sm) {
+      padding: var(--mantine-spacing-xl) 0;
+    }
+  }
+  .inner {
+    position: relative;
+    z-index: 1;
+
+    p {
+      font-size: 20px;
+    }
+
+    @media (max-width: $mantine-breakpoint-sm) {
+      p {
+        font-size: 18px;
+      }
+    }
+  }
+}

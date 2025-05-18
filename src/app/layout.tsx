@@ -1,20 +1,20 @@
-import type { Metadata } from "next";
-import { Inter } from "next/font/google";
 import "./globals.css";
-import Navbar from "@/components/layout/Navbar";
-import Footer from "@/components/layout/Footer";
-import FloatingCart from "@/components/common/FloatingCart";
+import "@mantine/core/styles.css";
+import type { Metadata } from "next";
 import { CartProvider } from "@/context/CartContext";
-
-const inter = Inter({ subsets: ["latin"] });
+import { MantineProvider } from "@mantine/core";
+import { interFont } from "@/config/fonts";
+import theme from "@/config/theme";
+import { Header, Footer } from "@/components";
 
 export const metadata: Metadata = {
   title: "Shimla Apple - Fresh Apples from the Heart of Shimla",
-  description: "Experience the authentic taste of premium Shimla apples, handpicked from our family-owned orchards and delivered fresh to your doorstep.",
+  description:
+    "Experience the authentic taste of premium Shimla apples, handpicked from our family-owned orchards and delivered fresh to your doorstep.",
   icons: {
-    icon: '/apple-icon.svg',
-    shortcut: '/apple-icon.svg',
-    apple: '/apple-icon.svg',
+    icon: "/apple-icon.svg",
+    shortcut: "/apple-icon.svg",
+    apple: "/apple-icon.svg",
   },
 };
 
@@ -25,13 +25,18 @@ export default function RootLayout({
 }) {
   return (
     <html lang="en">
-      <body className={inter.className}>
-        <CartProvider>
-          <Navbar />
-          <main>{children}</main>
-          <Footer />
-          <FloatingCart />
-        </CartProvider>
+      <body className={interFont.className}>
+        <MantineProvider
+          theme={theme}
+          defaultColorScheme="light"
+          forceColorScheme="light"
+        >
+          <CartProvider>
+            <Header />
+            <main>{children}</main>
+            <Footer />
+          </CartProvider>
+        </MantineProvider>
       </body>
     </html>
   );
