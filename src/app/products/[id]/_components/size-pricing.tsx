@@ -58,7 +58,6 @@ function Sizes({
                 >
                     <Text size="sm">{size}</Text>
                     <Text size="sm">{product.sizes[size as ProductKey].weight}</Text>
-                    <Text size="sm">₹{product.sizes[size as ProductKey].price}</Text>
                 </Flex>
             ),
         };
