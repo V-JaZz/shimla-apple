@@ -32,7 +32,7 @@ export function ProductCard({ product, type = "featured" }: ProductCardProps) {
                 <Badge variant="light" color="green">
                     {product.category}
                 </Badge>
-                <Text>₹{product.price}</Text>
+                <Text size="sm" className="red-primary">Starting at ₹{product.price}</Text>
             </Group>
 
             <Box pb={10}>
