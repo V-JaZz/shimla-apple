@@ -1,7 +1,17 @@
 "use client";
 
+import { QuantityInput } from "@/components";
+import { useCart } from "@/context/CartContext";
 import { Product } from "@/types";
-import { Box, BoxProps, Flex, SegmentedControl, Text } from "@mantine/core";
+import {
+    Box,
+    BoxProps,
+    Button,
+    Flex,
+    Group,
+    SegmentedControl,
+    Text,
+} from "@mantine/core";
 import { useMediaQuery } from "@mantine/hooks";
 import { useState } from "react";
 
@@ -16,6 +26,17 @@ type ProductKey = keyof Product["sizes"];
 export default function SizePricing({ product, ...props }: SizePricingProps) {
     const [selectedSize, setSelectedSize] = useState<ProductKey | null>(null);
     const [selectedWeight, setSelectedWeight] = useState<string | null>(null);
+    const [quantity, setQuantity] = useState(1);
+
+    const isMobile = useMediaQuery("(max-width: 500px)");
+    const { addToCart } = useCart();
+
+    const submitDisabled = !selectedSize || !selectedWeight;
+
+    function handleAddToCart() {
+        if (!selectedSize || !selectedWeight) return;
+        addToCart(product, quantity, selectedSize, selectedWeight);
+    }
 
     return (
         <Box {...props}>
@@ -32,6 +53,7 @@ export default function SizePricing({ product, ...props }: SizePricingProps) {
                     product={product}
                     selectedSize={selectedSize}
                     setSelectedSize={setSelectedSize}
+                    isMobile={isMobile}
                 />
             </Box>
 
@@ -43,8 +65,27 @@ export default function SizePricing({ product, ...props }: SizePricingProps) {
                     selectedWeight={selectedWeight}
                     setSelectedWeight={setSelectedWeight}
                 />
-                `
             </Box>
+
+            <Group mt={20} align="end" wrap="wrap">
+                <Box>
+                    <Text size="sm" mb={5} className="dimmed">
+                        Quantity
+                    </Text>
+                    <QuantityInput value={quantity} onChange={setQuantity} />
+                </Box>
+
+                <Button
+                    flex={isMobile ? "unset" : 1}
+                    size="lg"
+                    color="red"
+                    fullWidth
+                    disabled={submitDisabled}
+                    onClick={handleAddToCart}
+                >
+                    {submitDisabled ? "Select size and weight" : "Add to cart"}
+                </Button>
+            </Group>
         </Box>
     );
 }
@@ -53,12 +94,13 @@ function Sizes({
     product,
     selectedSize,
     setSelectedSize,
+    isMobile,
 }: {
     product: Product;
     selectedSize: ProductKey | null;
     setSelectedSize: React.Dispatch<React.SetStateAction<ProductKey | null>>;
+    isMobile: boolean | undefined;
 }) {
-    const isMobile = useMediaQuery("(max-width: 500px)");
     const mappingData = Object.keys(product.sizes).map((size) => {
         return {
             value: size,
