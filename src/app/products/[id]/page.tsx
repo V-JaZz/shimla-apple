@@ -3,6 +3,7 @@ import { Container, Image, Skeleton, Text, Title } from "@mantine/core";
 import { GridClient, GridColCient } from "@/components";
 import { getProductById } from "@/data/products";
 import SizePricing from "./_components/size-pricing";
+import ProductSpecifications from "./_components/product-specifications";
 
 export default async function SingleProduct({
     params,
@@ -40,9 +41,7 @@ export default async function SingleProduct({
 
                     <SizePricing product={product} mt={10} />
 
-                    <Skeleton mt={10} h={100} />
-                    <Skeleton mt={5} h={80} />
-                    <Skeleton mt={5} h={80} />
+                    <ProductSpecifications product={product} mt={30} />
                 </GridColCient>
             </GridClient>
         </Container>
