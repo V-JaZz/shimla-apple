@@ -30,7 +30,7 @@ export default function Hero() {
 
                         <Group mx="auto" mt={20}>
                             <Button color="red" size="md" component={Link} href="/products">
-                                Shopw Now
+                                Shop Now
                             </Button>
                             <Button size="md" variant="white" component={Link} href="/about">
                                 Learn More

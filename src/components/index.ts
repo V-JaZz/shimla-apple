@@ -4,3 +4,4 @@ export * from "./footer";
 export * from "./cards";
 export * from "./pagination";
 export * from "./clients";
+export * from "./quantity-input";
